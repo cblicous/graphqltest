@@ -15,4 +15,8 @@ public class AuthorDao {
             .filter(author -> id.equals(author.getId()))
             .findFirst();
     }
+    
+    public List<Author> getAllAuthors(){
+    	 return authors;
+    }
 }

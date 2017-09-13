@@ -16,6 +16,7 @@ type Author {
 # The Root Query for the application
 type Query {
     recentPosts(count: Int, offset: Int): [Post]!
+    allAuthors: [Author]!
 }
 
 # The Root Mutation for the application

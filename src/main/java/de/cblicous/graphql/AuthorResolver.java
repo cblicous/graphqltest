@@ -8,7 +8,7 @@ import com.coxautodev.graphql.tools.GraphQLResolver;
 
 /**
  * resolvers are for resolving of complex types
- * @author cbelka
+ * @author 
  *
  */
 public class AuthorResolver implements GraphQLResolver<Author> {
