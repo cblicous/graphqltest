@@ -19,4 +19,9 @@ public class AuthorDao {
     public List<Author> getAllAuthors(){
     	 return authors;
     }
+    
+    public void saveAuthor(Author author) {
+    	authors.add(author);
+    }
+    
 }
