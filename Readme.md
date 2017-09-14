@@ -18,4 +18,10 @@ Example Query:
     category
   }
 }
+
+Example Mutation
+
+mutation {writePost(title:"Mei", text:"Kusakabe", category:"mei@totoro.com", author: "Author0") {
+  id
+} }
  
