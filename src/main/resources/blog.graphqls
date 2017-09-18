@@ -19,8 +19,18 @@ type Query {
     allAuthors: [Author]!
 }
 
-# The Root Mutation for the application
-type Mutation {
-    writePost(title: String!, text: String!, category: String, author: String!) : Post!
-    createAuthor(name: String!, thumbnail: String!) : Author!
+input AuthorInput {
+	name: String! 
+	thumbnail: String!
 }
+
+# The Root Mutation for the application
+type RootMutation {
+    writePost(title: String!, text: String!, category: String, author: String!) : Post!
+    createAuthor(input: AuthorInput) : Author!
+}
+
+schema {
+	mutation: RootMutation
+}
+

@@ -4,11 +4,13 @@ import java.util.UUID;
 
 import com.coxautodev.graphql.tools.GraphQLMutationResolver;
 
-public class Mutation implements GraphQLMutationResolver {
+import de.cblicous.graphql.input.AuthorInput;
+
+public class RootMutation implements GraphQLMutationResolver {
     private PostDao postDao;
     private AuthorDao authorDao;
     
-    public Mutation(PostDao postDao,AuthorDao authorDao) {
+    public RootMutation(PostDao postDao,AuthorDao authorDao) {
         this.postDao = postDao;
         this.authorDao = authorDao;
     }
@@ -27,12 +29,12 @@ public class Mutation implements GraphQLMutationResolver {
     }
     
     
-    public Author createAuthor(String name, String thumbnail) {
+    public Author createAuthor(AuthorInput authorInput) {
         Author author = new Author();
-        author.setName(name);
+        author.setName(authorInput.getName());
         author.setId(UUID.randomUUID()
             .toString());
-        author.setThumbnail(thumbnail);
+        author.setThumbnail(authorInput.getThumbnail());
         authorDao.saveAuthor(author);
         return author;
     }
