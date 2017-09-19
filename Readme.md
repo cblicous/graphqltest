@@ -1,4 +1,4 @@
-Simple GraphQL Test 
+#H1 Simple GraphQL Test 
 
 Goolged together from other tutorials 
 currently first tries
@@ -8,7 +8,7 @@ gradle bootRun
 
 acces http://localhost:8080/graphiql for queryinterface 
 
-Example Query: 
+#H1 Example Query: 
 
 {
   recentPosts(count:2,offset:0){ 
@@ -19,9 +19,15 @@ Example Query:
   }
 }
 
-Example Mutation
+#H1 Example Mutations
 
+```json
 mutation {writePost(title:"Mei", text:"Kusakabe", category:"mei@totoro.com", author: "Author0") {
   id
 } }
+```
+
+```json
+ mutation {createAuthor(input: { name : "test",thumbnail : "testthumb"}) { id } }
+```
  
