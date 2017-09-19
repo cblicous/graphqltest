@@ -50,11 +50,7 @@ public class GraphQlConfiguration {
     public Query query(PostDao postDao, AuthorDao authorDao) {
         return new Query(postDao,authorDao);
     }
-    @Bean 
-    public OtherMutation otherMutation() {
-    	return new OtherMutation();
-    }
-    
+
     @Bean
     public RootMutation rootMutation(PostDao postDao,AuthorDao authorDao) {
         return new RootMutation(postDao,authorDao);

@@ -27,7 +27,7 @@ input AuthorInput {
 # The Root Mutation for the application
 type RootMutation {
     writePost(title: String!, text: String!, category: String, author: String!) : Post!
-    createAuthor(input: AuthorInput) : Author!
+    createAuthor(input: AuthorInput!) : Author!
 }
 
 schema {
