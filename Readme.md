@@ -1,4 +1,4 @@
-Simple GraphQL Test 
+### Simple GraphQL Test 
 
 Goolged together from other tutorials 
 currently first tries
@@ -8,7 +8,7 @@ gradle bootRun
 
 acces http://localhost:8080/graphiql for queryinterface 
 
-Example Query: 
+### Example Query: 
 
 {
   recentPosts(count:2,offset:0){ 
@@ -19,7 +19,7 @@ Example Query:
   }
 }
 
-Example Mutations
+### Example Mutations
 
 ```
 mutation {writePost(title:"Mei", text:"Kusakabe", category:"mei@totoro.com", author: "Author0") {
