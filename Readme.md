@@ -21,13 +21,13 @@ acces http://localhost:8080/graphiql for queryinterface
 
 #H1 Example Mutations
 
-```json
+```
 mutation {writePost(title:"Mei", text:"Kusakabe", category:"mei@totoro.com", author: "Author0") {
   id
 } }
 ```
 
-```json
+```
  mutation {createAuthor(input: { name : "test",thumbnail : "testthumb"}) { id } }
 ```
  
