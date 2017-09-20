@@ -30,4 +30,13 @@ mutation {writePost(title:"Mei", text:"Kusakabe", category:"mei@totoro.com", aut
 ```
  mutation {createAuthor(input: { name : "test",thumbnail : "testthumb"}) { id } }
 ```
+
+### Docker Build
+
+```
+gradle build 
+
+ docker run -p 8080:8081 cblicousgraphtest 
+```
  
+
