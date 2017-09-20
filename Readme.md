@@ -36,7 +36,10 @@ mutation {writePost(title:"Mei", text:"Kusakabe", category:"mei@totoro.com", aut
 ```
 gradle build 
 
- docker run -p 8080:8081 cblicousgraphtest 
+docker build  -t cblicousgraphtest .
+
+
+docker run -p 8080:8081 cblicousgraphtest 
 ```
  
 
